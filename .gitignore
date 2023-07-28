@@ -1,0 +1,11 @@
+/bin
+/obj
+.iobj
+.pch
+.pdb
+.ipdb
+.pgc
+.csproj
+Seminar_1_C#
+.sln
+.vscode
