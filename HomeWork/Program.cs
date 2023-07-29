@@ -68,3 +68,106 @@ else System.Console.WriteLine("Нет!");
     count ++;
     }
 */
+
+
+//===============================================================================
+
+
+
+ //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+/*
+int WriteWait(string outLine)
+{
+    Console.Write(outLine);
+    int inNumber = Convert.ToInt32(Console.ReadLine());
+    return inNumber;
+}
+   Repeat:
+int number = WriteWait("Пожалуйста, введите трёхзначное число: ");
+
+    if (number < 100 || number >= 1000)
+     {
+      Console.WriteLine("Вы ошиблись!");
+      goto Repeat;
+     }
+
+Console.WriteLine($"В введённом числе {number} вторая цифра: {number / 10 % 10}");
+
+*/
+
+//----------------------------------
+
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
+/*
+int WriteWait(string outLine)
+{
+    Console.Write(outLine);
+    int inNumber = Convert.ToInt32(Console.ReadLine());
+    return inNumber;
+}
+bool CheсkDigNum(int inNum)
+{
+    if (inNum < 100)
+    {
+        Console.WriteLine($"В этом числе {inNum} третья цифра отсутствует.");
+        return false;
+    }
+    return true;
+}
+int ThirdDigit(int inNum)
+{
+    while (inNum >= 1000)
+    {
+        inNum /= 10;
+    }
+    return inNum % 10;
+}
+
+int number = WriteWait("Пожалуйста, введите число: ");
+
+if (CheсkDigNum(number))
+{
+    Console.WriteLine($"В числе {number} третья цифра {ThirdDigit(number)}.");
+}
+*/
+
+//----------------------------------
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+/*
+int WriteWait(string outLine)
+{
+    Console.Write(outLine);
+    int inNumber = Convert.ToInt32(Console.ReadLine());
+    return inNumber;
+}
+
+bool Weekend(int digit)
+{
+    if (digit < 6)
+    {
+        return false;
+    }
+    return true;
+}
+Repeat:
+int day = WriteWait("Введите день недели от 1 до 7: ");
+
+   if (day < 1 || day > 7)
+      {
+       Console.WriteLine("Будьте внимательнее.");
+       goto Repeat;
+      }
+   if (Weekend(day))
+     {
+      Console.WriteLine("Сегодня выходной. Можно дальше спать.");
+     }
+else
+   {
+       Console.WriteLine("Обычный рабочий день.");
+   }
+
+*/
+
+//------------------------------------
