@@ -26,6 +26,8 @@ int cuttedNum =  CutNumber (randNum);
 //Console.WriteLine(CutNumber(randNumber)); //Один из вариантов вывода результата
 //Console.WriteLine($"New version of {randNumber} is {nerNumber}");
 
+//----------------------------------------------------------------------------
+
 // Task 2. Напишите программу, которая принимает на вход число и проверяет,
 // кратно ли оно одновременно a и b.
 /*
@@ -42,6 +44,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input a first divider: ");
 int divider1 = Convert.ToInt32(Console.ReadLine());
 */
+
+//-----------------------------------------------------------------------------
+
 // Task 3. Напишите программу, которая выводит случайное число 
 // из отрезка [10, 99] и показывает наибольшую цифру числа.
 
@@ -58,7 +63,9 @@ Console.WriteLine(number);
 int res = Maxnum(number);
 Console.WriteLine(res);
 */
-    
+
+//-----------------------------------------------------------------------------
+
 // Task 4. Напишите программу , которая принимает  на вход два числа и проверяет
 // является ли одно число квадратом другого.
 /*
