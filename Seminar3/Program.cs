@@ -8,7 +8,7 @@ int sum (int a)
       result += i;
     return result;
 }
- Console.WriteLine ("in put the number: ");
+ Console.WriteLine ("input the number: ");
  
  int number = Convert.ToInt32 (Console.ReadLine ());
 Console.WriteLine(sum(number)); 
@@ -49,3 +49,38 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(prov(number));
 
 */
+
+
+
+
+/*
+int[] CreateRandomArray(int size, int minValue, int maxValue)
+{
+    int[] array = new int[size]; //Заполнить при повторном просмотре
+
+    for(int i = 0; i < size; i++)
+        array[i] = new Random().Next(minValue, maxValue +1);
+    
+return array;
+}
+void WriteArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+       Console.while (array[i] + " ");
+
+   Console.WriteLine();
+}
+Console.Write("Input a length of an array; ");
+int length = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a min possible value": );
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int [] myArray = CreateRandomArray(length, min, max);
+WriteArray(myArray);
+*/
+
+
+
+
