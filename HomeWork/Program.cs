@@ -174,13 +174,13 @@ else
 //Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 /*
-Console.WriteLine("Введите число: ");
-string number = Console.ReadLine();
+Console.WriteLine("Введите число: ");        //Запрос числа
+string number = Console.ReadLine();          // Строка ввода числа
 int len = number.Length;
 
 if (len == 5)
-{
-    if (number[0] == number[4] && number[1] == number[3])
+{      
+    if (number[0] == number[4] && number[1] == number[3])       //Сравнивает 1-е и 5-е, 2-е и 4-е число.
     {
         Console.WriteLine($"{number} - Палиндром");
     }
