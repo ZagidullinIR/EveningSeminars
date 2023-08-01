@@ -244,6 +244,24 @@ int ReadInt(string message)
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+Console.WriteLine("Введите первое число: ");
+int a = Convert.Toint32(console.ReadLine());
+Console.WriteLine("Введите второе число: ");
+int b = Convert.Toint32(console.ReadLine());
+int c = 1;
+    if(b < 1)
+Console.Write("Число \n");
+    else
+    {
+        while
+        (b! = 0)
+        {
+         c = c * a;
+         b = b - 1;
+        }
+    Console.Write($"Число равно {c} ");
+    }
+
 // //  Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // //452 -> 11
 // //82 -> 10
