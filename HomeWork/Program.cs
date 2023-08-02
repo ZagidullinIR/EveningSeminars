@@ -244,28 +244,67 @@ int ReadInt(string message)
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите первое число: ");
-int a = Convert.Toint32(console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int b = Convert.Toint32(console.ReadLine());
-int c = 1;
-    if(b < 1)
-Console.Write("Число \n");
-    else
-    {
-        while
-        (b! = 0)
-        {
-         c = c * a;
-         b = b - 1;
-        }
-    Console.Write($"Число равно {c} ");
-    }
+/*
+int numA = ReadInt("Введите первое число: ");
+int numB = ReadInt("Введите второе число: ");
+ToDegree(numA, numB);
 
+
+// Функция возведения в степень
+void ToDegree(int a, int b)
+{
+    int result = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        result = result * a;
+    }
+    Console.WriteLine(a + " в степени " + b + " = " + result);
+}
+
+
+int ReadInt(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+*/
 // //  Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // //452 -> 11
 // //82 -> 10
 // //9012 -> 12
+
+int number = ReadInt("Введите число: ");
+
+int len = NumberLen(number);
+SumNumbers(number, len);
+
+int NumberLen(int a)
+  {
+    int index = 0;
+    while (a > 0)
+    {
+        a /= 10;index++;
+    }
+    return index;
+  }
+  
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+void SumNumbers(int n, int len)
+{
+    int sum = 0;
+    for (int i = 1; i <= len; i++)
+    {
+        sum += n % 10;
+        n /= 10;
+    }
+    Console.WriteLine($"сумма цифр {sum}");
+}
+
 
 // //  Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
