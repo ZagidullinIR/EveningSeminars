@@ -273,7 +273,7 @@ int ReadInt(string message)
 // //452 -> 11
 // //82 -> 10
 // //9012 -> 12
-
+/*
 int number = ReadInt("Введите число: ");
 
 int len = NumberLen(number);
@@ -305,7 +305,42 @@ void SumNumbers(int n, int len)
     Console.WriteLine($"сумма цифр {sum}");
 }
 
+*/
 
 // //  Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
+
+
+int[] CreateArr(int m, int minValue, int maxValue)
+{
+    int[] arr = new int[m]; //Выделяем ячейку памяти int[]
+
+    for(int i = 0; i < m; i++)
+        arr[i] = new Random().Next(minValue, maxValue +1);
+    return arr;
+}
+void WriteArr(int[] arr)
+{
+    Console.Write(arr[0]);
+    for (int i = 1; i < arr.Length; i++)
+    {
+        Console.Write($", {arr[i]}");
+    }
+    Console.Write($" - > [{arr[0]}");
+    for (int i = 1; i < arr.Length; i++)
+    {
+        Console.Write($", {arr[i]}");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+Console.Write("Your m: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Your value min: ");
+int valMin = Convert.ToInt32(Console.ReadLine());
+Console.Write("Your value max: ");
+int valMax = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = CreateArr(n, valMin, valMax);
+WriteArr(myArray);
