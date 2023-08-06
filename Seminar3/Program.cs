@@ -12,8 +12,8 @@ int sum (int a)
  
  int number = Convert.ToInt32 (Console.ReadLine ());
 Console.WriteLine(sum(number)); 
-
 */
+
 
 //   Напишите программу, которая принимает на вход число и выдаёт
 //   количество цифр в числе.
@@ -56,7 +56,10 @@ Console.WriteLine(prov(number));
 /*
 int[] CreateRandomArray(int size, int minValue, int maxValue)
 {
-    int[] array = new int[size]; //Заполнить при повторном просмотре
+    int[] array = new int[size]; //Выделяем ячейку памяти int[],
+    // new int -указываем сколько элементов у нас будет. В случае 
+       инициализации обязательно нужно указать размер,в данном случае 
+       размер это *size*. 
 
     for(int i = 0; i < size; i++)
         array[i] = new Random().Next(minValue, maxValue +1);
