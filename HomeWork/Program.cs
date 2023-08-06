@@ -311,7 +311,7 @@ void SumNumbers(int n, int len)
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-
+/*
 int[] CreateArr(int m, int minValue, int maxValue)
 {
     int[] arr = new int[m]; //Выделяем ячейку памяти int[]
@@ -344,3 +344,5 @@ int valMax = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateArr(n, valMin, valMax);
 WriteArr(myArray);
+
+*/
