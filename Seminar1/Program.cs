@@ -24,14 +24,13 @@ Console.WriteLine("Your number is " + num);
 // является ли первое число квадратом второго.
 
 /*
-Console.Write("Input a first number: "); //Вывести в этой строке фразу "Input a first number:
+Console.Write("Введите первое число: "); //Вывести в этой строке фразу "Input a first number:
 int num1 = Convert.ToInt32(Console.ReadLine()); //Выделить переменную, которая будет называться num1
  //в которую запишется конвертируемое в тип инт32, значение введеное пользователем.
 Console.Write("Input a second number: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-int quad2 = num2 * num2; // Объявить переменную куда мы записываем предыдущую переменную 
-// на умноженную на себя.
+int quad2 = num2 * num2; // Объявить переменную куда мы записываем предыдущую переменную умноженную на себя.
 if(num1 == quad2) // Если переменная 1 совпадает с переменной 2
 { // тогда выводим сообщение "Yes" 
    Console.WriteLine("Yes!");
@@ -49,12 +48,12 @@ else  // Иначе выводим сообщение "No"
 Console.Write("Inpet a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int current = -num;
+int current = -num; // Создали значение каррент и присвоили ему НУМ минус
 
-while(current <= num)
+while(current <= num) //Пока каррент "Меньше или равен НУМ" будет работать цикл
 {
-    Console.Write(current + " ");
-    current++;
+    Console.Write(current + " "); //К значению каррент  склеиваем '+'  и " " этим добавляем пробел
+    current++; // Тут у нас счетчик, в нем добавляем +1 и дальше идет по циклу
 }
 */
 
