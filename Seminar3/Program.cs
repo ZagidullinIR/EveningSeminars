@@ -1,89 +1,91 @@
-﻿//   Напишите программу, которая принимает на вход число (А) 
-//   и выдаёт сумму чисел от 1 до А.
+﻿//Seminar 3.
+
+//Theory 
+        // Console.WriteLine(Math.Pow(5 ,2));
+        // Console.WriteLine(Math.Sqrt(24));
+        // Console.WriteLine(Math.Round(Math.Sqrt(24), 2));
+
+    //Task 1. Напишите программу, которая по заданному номеру четверти,
+// показывает диапазон возможных координат точек в этой четверти(X и Y).
 /*
-int sum (int a)
+void WriteRange(int qadrant)
 {
-    int result = 0;
-    for(int i = 1; i <= a; i++)
-      result += i;
-    return result;
+    if(qadrant < 1 || qadrant > 4) Console.WriteLine("Uncorrect data!");
+    else if(qadrant == 1) Console.WriteLine("x > 0 and y > 0");
+    else if(qadrant == 2) Console.WriteLine("x < 0 and y > 0");
+    else if(qadrant == 3) Console.WriteLine("x > 0 and y < 0");
+    else Console.WriteLine("x < 0 and y > 0");
+    //return; //можно использовать возврат, но не обязательно. БЕЗ ВОЗВРАТА МЕТОДА
 }
- Console.WriteLine ("input the number: ");
- 
- int number = Convert.ToInt32 (Console.ReadLine ());
-Console.WriteLine(sum(number)); 
+
+Console.Write("Input a number of qadrant: ");
+int quad = Convert.ToInt32(Console.ReadLine());
+
+WriteRange(quad);
+*/
+
+//Task 2.Напишите программу, которая принимает на вход координаты 
+    // точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, 
+    // в которой находится эта точка.
+ /*  
+   int Quadrant(int x, int y)
+   {
+    if (x > 0 && y > 0) return 1;
+    if (x < 0 && y > 0) return 2;
+    if (x < 0 && y < 0) return 3;
+    if (x > 0 && y < 0) return 4;
+    return 0;
+   }
+
+Console.Write("Input x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+int quad = Quadrant(x, y);
+if (quad == 0) Console.WriteLine("Uncorrect data");
+else Console.Write("Quadrant number is: " + quad);
 */
 
 
-//   Напишите программу, которая принимает на вход число и выдаёт
-//   количество цифр в числе.
-
+//Task 3.Напишите программу, которая принимает на вход число (N) и 
+   //  выдаёт квадраты чисел от 1 до N.
 /*
-    int CountNumbers(int N)
-    {   
-        int count = 1;
-        for (; 10 <= N; count ++)
-           N = N/10;
-        return count;    
-    }
-    Console.WriteLine("Input the number: ");
-    int number = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(CountNumbers(number));
+   void WriteQuad(int number)
+   {
+        int current = 1;
+        while(current <= number)
+        {
+         Console.WriteLine($"{current} - {current * current}");
+            current++;    
+        } 
+   }
 
-*/
-
-//   Напишите программу, которая принимает на вход число N и выдаёт 
-//   произведение нечетных чисел от 1 до N.
-
-/*
-int prov (int a)
-{
-    int result = 1;
-    for(int i = 1; i <= a; i = i+2)
-        result *= i;
-    return result;
-}
-Console.WriteLine("input the number:  ");
-
+Console.Write("Input a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(prov(number));
 
+WriteQuad(number);
 */
 
-
-
+//Task 4.Напишите программу, которая принимает на вход координаты 
+    // двух точек и находит расстояние между ними в 2D пространстве.
 
 /*
-int[] CreateRandomArray(int size, int minValue, int maxValue)
+double Distance(double x1 , double y1 , double x2 , double y2)   
 {
-    int[] array = new int[size]; //Выделяем ячейку памяти int[],
-    // new int -указываем сколько элементов у нас будет. В случае 
-       инициализации обязательно нужно указать размер,в данном случае 
-       размер это *size*. 
+    double deltaX = x2 - x1;
+    double deltaY = y2 - y1;
 
-    for(int i = 0; i < size; i++)
-        array[i] = new Random().Next(minValue, maxValue +1);
-    
-return array;
+    return Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
 }
-void WriteArray(int[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-       Console.while (array[i] + " ");
+Console.Write("Input x1: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input y1: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input x2: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input y2: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
 
-   Console.WriteLine();
-}
-Console.Write("Input a length of an array; ");
-int length = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a min possible value": );
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a max possible value: ");
-int max = Convert.ToInt32(Console.ReadLine());
-
-int [] myArray = CreateRandomArray(length, min, max);
-WriteArray(myArray);
+Console.WriteLine(Distance (x1 , y1 , x2 , y2 ));
 */
-
-
-
-
