@@ -499,12 +499,14 @@ void Counting (int inTotal)
     }
     Console.WriteLine("Вы ввели положительных чисел: " + count);
 }
- Console.WriteLine("Обрабатываю данные.... .\n");
+ Console.WriteLine("Обрабатываю данные.... .");
  int tutu =  WriteWait("Введите числа: ");
 Counting (tutu);
 */
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями 
+// y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
+//b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.WriteLine("Введите переменную b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
@@ -518,13 +520,5 @@ double k2 = Convert.ToDouble(Console.ReadLine());
 double x = (b2 - b1) / (k1 - k2);
 double y = x * k1 + b1;
 
-Console.Write($"Точка пересечения двух прямых: ({x} ;{y}).");
+Console.Write($"Точка пересечения двух прямых: ( {x}; {y}).");
 
-
-
-
-
-
-//Домашка необязательная.
-//Написать программу, преобразующую число 
-//из десятеричной системы счисления в двоичную.
