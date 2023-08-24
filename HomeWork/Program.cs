@@ -472,3 +472,59 @@ void PrintArray(double[] num)
     Console.WriteLine();
 }
 */
+
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+//0, 7, 8, -2, -2 -> 2
+//1, -7, 567, 89, 223-> 4
+
+/*
+int WriteWait(string inGenius)
+   {
+    Console.Write(inGenius);
+    int Numbers = Convert.ToInt32(Console.ReadLine());
+   
+    return Numbers;
+   }
+
+void Counting (int inTotal)
+{
+    int count = 0;
+    for (int i = 0; i< inTotal; i++)
+    {
+        Console.Write($"Введите {i + 1} -e число: ");
+
+        if ((Convert.ToInt32(Console.ReadLine()) > 0))
+        count++;
+    }
+    Console.WriteLine("Вы ввели положительных чисел: " + count);
+}
+ Console.WriteLine("Обрабатываю данные.... .\n");
+ int tutu =  WriteWait("Введите числа: ");
+Counting (tutu);
+*/
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями 
+
+
+Console.WriteLine("Введите переменную b1: ");
+double b1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите переменную k1: ");
+double k1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите переменную b2: ");
+double b2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите переменную k2: ");
+double k2 = Convert.ToDouble(Console.ReadLine());
+
+double x = (b2 - b1) / (k1 - k2);
+double y = x * k1 + b1;
+
+Console.Write($"Точка пересечения двух прямых: ({x} ;{y}).");
+
+
+
+
+
+
+//Домашка необязательная.
+//Написать программу, преобразующую число 
+//из десятеричной системы счисления в двоичную.
