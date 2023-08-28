@@ -45,3 +45,18 @@ Console.WriteLine(year);
 //--------------------------------------
 
 //Метод 4 Принимает и возвращает данные
+
+string Method4(int count, string text)
+{
+    int i = 0;
+    string result = ""; // String.Empty; - Это аналог, без разницы что использовать 
+
+    while(i < count)
+    {
+        result = result + text;
+        i++;
+    } 
+    return result;
+}
+string res = Method4(10, "qwerty text");
+Console.WriteLine(res);
