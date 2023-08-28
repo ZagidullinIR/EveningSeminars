@@ -6,9 +6,9 @@
 
 // Example002_HelloUser Приветствие
 /*
-Console.WriteLine("Введите ваше имя ")
+Console.WriteLine("Введите ваше имя ");
 string username = Console.ReadLine();
-Console.WriteLine("Привет, ");
+Console.WriteLine("Привет, " + username);
 Console.WriteLine(username);
 */
 
@@ -22,11 +22,13 @@ Console.WriteLine(username);
 
 /* 
 int numberA = new Random().Next(1,10); //1 2 3 4 
-  Console.WriteLine(numberA);  // Отображает строку в  терминале со своим значением.
-   int number B = new Random().Next (1,10);
-   Console.WriteLine(numberB);
-   int result = numberA + numberB;
-   Console.WriteLine (result);
+Console.WriteLine(numberA);  // Отображает строку в  терминале со своим значением.
+
+int number B = new Random().Next (1,10);
+Console.WriteLine(numberB);
+
+int result = numberA + numberB;
+Console.WriteLine (result);
 */
 
 //Example004_Div Деление
@@ -36,7 +38,7 @@ doble numberB = 5;  // doble - деление с остатком
 Console.WriteLine(numberA / numberB); 
 */
 
-//Example005_Condition_if_Else
+//Example005_Condition_if_Else Приветствие с Именем Машуня
 
 /*
 
@@ -77,14 +79,13 @@ Console.WriteLine(max);
 
 //Example007_Magic_Цикл
 /*
-using System.Runtime.Intrinsics.X86;
 
 Console.Clear();
 Console.SetCursorPosition(10,4);
 Console.WriteLine("+");
 
-int xa = 40, ya = 1
-    xb = 1, yb = 30
+int xa = 40, ya = 1,
+    xb = 1, yb = 30,
     xc = 80, yc = 30;
 
 Console.SetCursorPosition(xa, ya);
