@@ -29,6 +29,7 @@ int SumOfNegatives(int[] array)
     
     return sum;
 }
+
 Console.Write("Input a length of array: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a min possible value: ");
