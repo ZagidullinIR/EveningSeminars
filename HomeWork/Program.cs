@@ -587,7 +587,7 @@ if
     (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) 
      Console.WriteLine(numbers[rows, colums]);
 else
-     Console.WriteLine($"{rows},{colums} -> такого числа в массиве нет");
+     Console.WriteLine($"{rows},{colums} -> такого числа c такими индексами нет");
 
 
 // Заполнение массива рандомными числами от 1 до 9
