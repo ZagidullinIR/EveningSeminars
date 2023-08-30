@@ -69,6 +69,7 @@ Show2dArray(myArray);
 //Задайте двумерный массив. Напишите программу,
 // которая заменяет строки на столбцы.
 
+/*
 int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
     int[,] array = new int[rows, columns];
@@ -122,54 +123,87 @@ Show2dArray(myArray);
 
 ChangeRowsToColoumns(myArray);
 Show2dArray(myArray);
-
-
+*/
 
 //Task 3.
 //Из двумерного массива целых чисел удалить строку и столбец, 
 //на пересечении которых расположен наименьший элемент.
 
-int[,] ChangedArray(int[,] array)
+/*
+
+int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
-    int[,] result = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
-    int min = array[0, 0];
+    int[,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            array[i, j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return array;
+}
+
+
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+
+int[,] DelteRowAndColoumnWithMinValue (int[,] array)
+{
     int minI = 0;
     int minJ = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (min > array[i, j])
+            if (array[i, j] < array[minI, minJ])
             {
                 minI = i;
                 minJ = j;
-            }
-
+            } 
         }
     }
+
+    int[,] result = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
     for (int i = 0; i < result.GetLength(0); i++)
     {
         for (int j = 0; j < result.GetLength(1); j++)
         {
-            if (i < minI && j < minJ)
-            {
-                result[i, j] = array[i, j];
-            }
-            if (i < minI && j > minJ)
-            {
-                result[i, j] = array[i, j + 1];
-            }
-            if (i > minI && j < minJ)
-            {
-                result[i, j] = array[i + 1, j];
-            }
-            if (i > minI && j > minJ)
-            {
-                result[i, j] = array[i + 1, j + 1];
-            }
-
+            if (i < minI && j < minJ) result[i, j] = array[i, j]; 
+            if (i < minI && j >= minJ) result[i, j] = array[i, j + 1];
+            if (i >= minI && j < minJ) result[i, j] = array[i + 1, j];
+            if (i >= minI && j >= minJ) result[i, j] = array[i + 1, j + 1];
         }
-
     }
     return result;
 }
+
+Console.Write("Input a quantity of rows: "); 
+int row = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a quantity of columns: ");
+int col = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a min possible value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[,] myArray = CreateRandom2dArray(row, col, min, max);
+Show2dArray(myArray);
+
+int[,] newArray = DelteRowAndColoumnWithMinValue(myArray);
+Show2dArray(newArray);
+*/
+
+//-----------E-N-D-----------------
