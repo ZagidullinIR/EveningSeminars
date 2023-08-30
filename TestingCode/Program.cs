@@ -138,6 +138,7 @@ int[,] numbers = new int[n, m];
 FillArrayRandomNumbers(numbers);
 
 
+
 void FillArrayRandomNumbers(int[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
@@ -160,6 +161,9 @@ void PrintArray(int[,] array)
     Console.WriteLine("");
   }
 }
+Console.WriteLine();
+PrintArray(numbers);
+Console.WriteLine();
 
 for (int j = 0; j < numbers.GetLength(1); j++)
 {
@@ -171,5 +175,3 @@ for (int j = 0; j < numbers.GetLength(1); j++)
   avarage = avarage / n;
   Console.Write(avarage + "; ");
 }
-Console.WriteLine();
-PrintArray(numbers);
