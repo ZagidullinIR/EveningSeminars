@@ -53,8 +53,8 @@ if (num % 2 == 0) Console.WriteLine("Да!");
 else System.Console.WriteLine("Нет!");
  */
 
- //Задача №8
- //   Напишите программу, которая на вход принимает число(N), а на выходе показывает все все числа от 1 до N.
+//Задача №8
+//   Напишите программу, которая на вход принимает число(N), а на выходе показывает все все числа от 1 до N.
 /*
  Console.Write("Введите число: ");
  int num = Convert.ToInt32(Console.ReadLine());
@@ -74,7 +74,7 @@ else System.Console.WriteLine("Нет!");
 
 
 
- //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 /*
 int WriteWait(string outLine)
 {
@@ -389,7 +389,7 @@ void PrintArray(int[] num)
 */
 
 
- //Task 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+//Task 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
 
@@ -524,3 +524,149 @@ Console.Write($"Точка пересечения двух прямых: ( {x}; 
 */
 
 
+//Задача 47. Задайте двумерный массив размером m × n, заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+/*
+Console.WriteLine("Задайте количество строк двумерного массива:");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Задайте количество столбцов двумерного массива:");
+int n = Convert.ToInt32(Console.ReadLine());
+double[,] twoDimArray = new double[m, n];
+Random rand = new Random();
+void PrintArray(double[,] matrix)
+{ 
+   for (int i = 0; i < m; i++)
+  { 
+   for (int j = 0; j < n; j++)
+   { 
+      Console.Write($"{matrix[i, j]} ");
+   }
+      Console.WriteLine();
+  }
+}
+
+void FillArray(double[,] matrix)
+{ 
+    for (int i = 0; i < m; i++)
+  { 
+     for (int j = 0; j < n; j++)
+    {
+       matrix[i,j] = Convert.ToDouble(rand.Next(-100, 100)/10.0);
+    }
+  }
+}
+FillArray(twoDimArray);
+Console.WriteLine();
+PrintArray(twoDimArray);
+*/
+
+//Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение 
+//этого элемента или же указание, что такого элемента нет.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 1,7 -> такого числа в массиве нет
+
+/*
+Console.Write("Введите номер строки: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите номер столбца: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+
+int[,] numbers = new int[6, 8];
+FillArray2D(numbers);
+PrintArray2D(numbers);
+
+if 
+    (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) 
+     Console.WriteLine(numbers[rows, colums]);
+else
+     Console.WriteLine($"{rows},{colums} -> такого числа в массиве нет");
+
+
+// Заполнение массива рандомными числами от 1 до 9
+void FillArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        
+        }
+    }
+}
+//  Функция вывода массива в терминал
+void PrintArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+return;
+*/
+
+
+//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+int[,] numbers = new int[8, 8];
+FillArray2D(numbers);
+PrintArray2D(numbers);
+
+// Заполнение массива рандомными числами от 1 до 9
+void FillArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+//  Функция вывода массива в терминал
+void PrintArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+return;
+
+void Colomns(int[,] array)
+    {     
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            double sum = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                sum += array[i, j];                        
+            }                     
+            double average = sum / array.GetLength(1);
+                Console.WriteLine($"{average} is averege of {j} colomn");
+        }
+          Console.WriteLine();  
+   }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj": {}
+    "C:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj": {}
   },
   "projects": {
-    "c:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj": {
+    "C:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj",
+        "projectUniqueName": "C:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj",
         "projectName": "HomeWork",
-        "projectPath": "c:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj",
+        "projectPath": "C:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\HomeWork.csproj",
         "packagesPath": "C:\\Users\\idol1\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\obj\\",
+        "outputPath": "C:\\Users\\idol1\\OneDrive\\Рабочий стол\\EveningSeminars\\HomeWork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\idol1\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -108,10 +108,8 @@ int[,] ChangeRowsToColoumns (int[,] array) //значение столбца в�
                         int temp = array[i, j];
                         array[i, j] = array[j, i];
                         array[j, i] = temp;
-
-                        
                     }
-                        
+          
                 }
                 return array;
             }
@@ -139,47 +137,47 @@ Console.Write("Enter a row quantity of an array: ");
 //Из двумерного массива целых чисел удалить строку и столбец, 
 //на пересечении которых расположен наименьший элемент.
 
-nt[,] ChangedArray(int[,] array)
-{
+ int[,] ChangedArray(int[,] array)
+ {
     int [,] result = new int[array.GetLength(0)-1, array.GetLength(1)-1 ];
     int min = array[0,0];
-    int minI= 0;
-    int minJ =0;
-    for(int i=0; i<array.GetLength(0); i++)
+    int minI = 0;
+    int minJ = 0;
+    for(int i = 0; i < array.GetLength(0); i++)
     {
-        for(int j=0; j<array.GetLength(1); j++)
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            if(min>array[i,j] )
+            if(min > array[i,j] )
             {
                 minI = i;
-                minJ=j;
+                minJ = j;
             }
 
         }
     }
-    for(int i=0; i<result.GetLength(0); i++)
+    for(int i = 0; i < result.GetLength(0); i++)
     {
-        for(int j=0; j<result.GetLength(1); j++)
+        for(int j = 0; j < result.GetLength(1); j++)
         {
-            if(i<minI && j<minJ)
+            if(i < minI && j < minJ)
             {
-                result[i,j]=array[i,j];
+                result[i,j]= array[i,j];
             }
-            if(i<minI && j>minJ)
+            if(i < minI && j > minJ)
             {
-                result[i,j]=array[i,j+1];
+                result[i,j] = array[i,j+1];
             }
-             if(i>minI && j<minJ)
+             if(i > minI && j < minJ)
             {
-                result[i,j]=array[i+1,j];
+                result[i,j] = array[i+1,j];
             }
-            if(i>minI && j>minJ)
+            if(i > minI && j > minJ)
             {
-                result[i,j]=array[i+1,j+1];
+                result[i,j] = array[i+1,j+1];
             }
 
         }
 
     }
     return result;
-    
+ }   

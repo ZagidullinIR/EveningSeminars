@@ -153,7 +153,7 @@ Print2dArray(myArray);
 
 //Task 4.
 //  Задайте двумерный массив. Найдите сумму элементов, находящихся на главной 
-//  диагонали (с индексами (0,0); (1;1) и т.д.
+//  диагонали с индексами (0,0); (1;1) и т.д.
 
 /*
 void Print2dArray(int[,] array)
@@ -235,8 +235,8 @@ void SortLine(int[,] array)
         {
             for(int k =0; k < array.GetLength(1) - 1; k++)
             {
-             if (array[i,k] < array[i,k + 1])
-              {
+              if (array[i,k] < array[i,k + 1])
+               {
                 int temp = array[i,k];
                 array[i,k] = array[i,k +1];
                 array[i,k + 1] = temp;
@@ -254,3 +254,6 @@ Console.WriteLine();
 SortLine(myArray);
 Print2dArray(myArray);
 */
+
+
+Запись: int [] array = new int[size] создаст массив с именем array в котором будет size элементов и все они будут равны 0.z
