@@ -198,9 +198,6 @@ int[] array = {11, 21, 31, 41, 51, 61, 71, 81, 91,};
  }
 */
 
-//using System.Collections.ObjectModel;
-//using System.Runtime.CompilerServices;
-//using Microsoft.VisualBasic;
 
 /*
  void FillArray(int[] collection)
@@ -254,7 +251,7 @@ Console.WriteLine(pos);
 //Example010  МЕТОДЫ VOID
 
 // Первый метод - Вывод информации
- 
+
 /* 
 void Method1()
 {
@@ -297,26 +294,26 @@ int Method3()
 
  */
 
- //Четвертый метод - Принимает и выдает информацию
+//Четвертый метод - Принимает и выдает информацию
 
- /*
- string Method4(int count, string text)
- {
-    int i = 0;
-    string result = String.Empty;
-    while (i < count)
-    {
-        result = result + text;
-        i++;
-    }
-    return result;
- }
- string res = Method4(10, "asdf");
- Console.WriteLine(res);
- 
- */
+/*
+string Method4(int count, string text)
+{
+   int i = 0;
+   string result = String.Empty;
+   while (i < count)
+   {
+       result = result + text;
+       i++;
+   }
+   return result;
+}
+string res = Method4(10, "asdf");
+Console.WriteLine(res);
 
- //Четвертый метод сокращенный.
+*/
+
+//Четвертый метод сокращенный.
 /*
  string Method4(int count, string text)
  {
@@ -430,5 +427,119 @@ PrintArray(arr);
 
 //-------------------------------------
 
-//Example_012-5
+//Example_012-5 Двумерные массивы
 
+/* Вывод текста в консоли.
+
+string[,] table = new string[2, 5];
+
+table[1, 2] = "слово";
+
+for (int rows = 0; rows < 2; rows++)
+    {   
+        for (int columns; columns < 5; columns++)
+        {
+            Console.WriteLine($"-{table[rows, columns]}-");    
+        }
+    }   
+*/
+
+/*
+void PrintArray(int[,] matrix)
+{
+    for (int i = 0; i < 3; i++) // matrix.Getlength(0) = можно юзать вместо 3-ки 
+    {
+        for (int j = 0; j < 4; j++) //matrix.Getlength(0) = можно юзать вмето 4-ки
+        {
+            Console.Write($"{matrix[i, j]} ");
+        }
+        Console.WriteLine();  //Принудительный перевод на новую строку    
+    }
+}
+
+void FillArray(int[,] matrix)//Заполняет матрицу случайными числами
+{
+    for (int i =0; i < 3; i++)
+    {
+        for(int j = 0; j < 4; j++)
+        {
+            matrix[i, j] = new Random().Next(1,10);
+            //Создали Рандомайзер
+        }
+    }
+}
+
+int[,] matrix = new int[3, 4]; //Задаем колличество памяти,
+                               // сколько будет выделенно ячеек
+PrintArray(matrix);
+Console.WriteLine();
+FillArray(matrix);  //Выводит рандомные числа
+PrintArray(matrix);
+*/
+
+// Рука
+
+/*
+int[,] pic = new int[,]
+{
+    { 0, 0,}
+}
+void PrintImage(int[,] image)
+{
+    for(int i = 0; i < image.GetLength(0); i++)
+    {
+        for (int j = 0; i < image.GetLength(1); j++)
+       { 
+            //Console.WriteLine($"{matrix[i, j]}");
+            if(image[i, j] == 0) Console.Write($" "); //Если ноль, то печатаем пробел
+            else Console.Write($"+"); //Если не ноль то печатаем +
+       }
+    }
+    Console.WriteLine();
+}
+void FillImage(int row,int col)
+{
+    if (pic[row,col] ==0)
+    {
+        pic[row,col] = 1;
+        FillImage(row - 1; col);
+        FillImage(row; col - 1);
+        FillImage(row + 1; col);
+        FillImage(row; col + 1);
+    }
+}
+
+PrintImage(pic);
+FillImage(13,13);
+PrintImage(pic);
+*/
+
+//--------------------------------------
+
+// Факториал
+
+/*
+double Factorial (int n)
+{
+    if (n ==1) return 1;
+    else return n * Factorial(n - 1);
+}
+for(int i = 1; i < 10; i++)
+{
+    Console.WriteLine($"{i}! = {Factorial(i)}");
+}
+*/
+
+//--------------------------------------
+
+// Fibonachi
+int Fibonacci(int n)
+ {
+    if(n == 1 || n == 2) return 1;
+    else Fibonacci(n - 1) + Fibonacci(n - 2);
+ }
+
+for (int i =1 ; i < 10; i++)
+{
+    Console.WriteLine(length);
+}
