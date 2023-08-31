@@ -128,7 +128,7 @@ mas(m, n);
 colomns(m, n);
 */
 
-
+/*
 Console.Write("введите количество строк: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.Write("введите количество столбцов: ");
@@ -175,3 +175,4 @@ for (int j = 0; j < numbers.GetLength(1); j++)
   avarage = avarage / n;
   Console.Write(avarage + "; ");
 }
+*/
