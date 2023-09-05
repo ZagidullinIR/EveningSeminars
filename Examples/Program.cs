@@ -38,7 +38,7 @@ doble numberB = 5;  // doble - деление с остатком
 Console.WriteLine(numberA / numberB); 
 */
 
-//Example005_Condition_if_Else Приветствие с Именем Машуня
+// Else Приветствие с Именем Машуня
 
 /*
 
@@ -56,7 +56,7 @@ else
 }
 */
 
-//Example006_Base Пузырьковый метод перебора МАКС значения числа.
+// Пузырьковый метод перебора МАКС значения числа.
 
 /*
 int a = 1;
@@ -77,7 +77,7 @@ Console.WriteLine("max = ");
 Console.WriteLine(max);
 */
 
-//Example007_Magic_Цикл
+// Цикл
 /*
 
 Console.Clear();
@@ -248,7 +248,7 @@ int pos = IndexOf(array, 4);
 Console.WriteLine(pos);
 */
 
-//Example010  МЕТОДЫ VOID
+// МЕТОДЫ VOID
 
 // Первый метод - Вывод информации
 
@@ -282,7 +282,7 @@ Method21(count: 4, msg: "новый текст");
 
 */
 
-//Третий метод  - Только выдает информацию
+// Третий метод  - Только выдает информацию
 
 /*
 int Method3()
@@ -294,7 +294,7 @@ int Method3()
 
  */
 
-//Четвертый метод - Принимает и выдает информацию
+// Четвертый метод - Принимает и выдает информацию
 
 /*
 string Method4(int count, string text)
@@ -313,7 +313,7 @@ Console.WriteLine(res);
 
 */
 
-//Четвертый метод сокращенный.
+// Четвертый метод сокращенный.
 /*
  string Method4(int count, string text)
  {
@@ -329,9 +329,9 @@ Console.WriteLine(res);
  Console.WriteLine(res);
 */
 
-//Возможности методов.
+// Возможности методов.
 
-//Таблица умножения
+// Таблица умножения
 
 /*
 for(int i = 2; i <= 10; i++)
@@ -346,10 +346,12 @@ for(int i = 2; i <= 10; i++)
 
 //Example011 Работа с текстом
 
-//Дан текст.В тексте нужно все пробелы заменить черточками,
-// маленькие буквы "к" заменить большими "К",
-// а большие "С" заменить маленькими "с".
-//Начало текста
+// Дан текст.В тексте нужно все пробелы заменить черточками,
+//  маленькие буквы "к" заменить большими "К",
+//  а большие "С" заменить маленькими "с".
+
+// Начало текста
+
 /*
 string text = "- Я думаю, - сказал князь, улыбаясь, - что,"
             + "ежели бы вас послали вместо нашего милого Винценгероде,"
@@ -388,7 +390,7 @@ newText = Replace(newText, 'с' , 'С');
 Console.WriteLine(newText);
 */
 
-//Example_012 Сортировка Массива
+// Сортировка Массива
 
 /*
 int[] arr = {1, 5, 4, 3, 2, 7, 6, 1, 1};
@@ -427,7 +429,7 @@ PrintArray(arr);
 
 //-------------------------------------
 
-//Example_012-5 Двумерные массивы
+// Двумерные массивы
 
 /* Вывод текста в консоли.
 
@@ -477,7 +479,7 @@ FillArray(matrix);  //Выводит рандомные числа
 PrintArray(matrix);
 */
 
-// Рука
+// Рука рисунок(не реализован, сложно реализовать).
 
 /*
 int[,] pic = new int[,]
@@ -533,13 +535,84 @@ for(int i = 1; i < 10; i++)
 //--------------------------------------
 
 // Fibonachi
+
+/*
 int Fibonacci(int n)
  {
     if(n == 1 || n == 2) return 1;
-    else Fibonacci(n - 1) + Fibonacci(n - 2);
+    else return Fibonacci(n - 1) + Fibonacci(n - 2);
  }
 
 for (int i =1 ; i < 10; i++)
 {
-    Console.WriteLine(length);
+    Console.WriteLine(Fibonacci(i));
 }
+*/
+
+//----------------------------------------
+
+//Треугольник Паскаля --- Что-то не работает(((
+
+/* 
+int row = 5;
+int[,] triangle = new int[row, row];
+const int cellWidth = 1;
+
+void FillTriangle()
+{
+    for (int i = 0; i < row; i++)
+    {
+        triangle[i, 0] = 1;
+        triangle[i, i] = 1;
+    }
+
+    for (int i = 2; i < row; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            triangle[i, j] = triangle[i - 1, j - 1] + triangle[i - 1, j];
+        }
+    }
+}
+
+
+void PrintTriangle()
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            if (triangle[i, j] != 0)
+                Console.Write($"{triangle[i ,j],cellWidth}");
+        }
+        Console.WriteLine();
+    }
+}
+
+void Magic()
+{
+    int col = cellWidth * row;
+    for (int i = 0; i < row; i++)
+    {
+        for(int j = 0; j <= i; j++)
+        {
+            Console.SetCursorPosition(col, i + 1);
+            //if(triangle[i,j] != 0) Console.WriteLine($"{triangle[i, j],cellWidth}");
+            if (triangle[i, j] != 0) Console.WriteLine("*");
+            col += cellWidth * 2;
+        }
+        col = cellWidth * row - cellWidth * (i + 1);
+        
+        Console.WriteLine();
+    }
+
+}
+
+Console.ReadLine();
+FillTriangle();
+//PrintTriagle();
+Console.ReadLine();
+Magic();
+*/
+
+//-----------------------------------------
