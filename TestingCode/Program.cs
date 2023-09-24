@@ -176,3 +176,19 @@ for (int j = 0; j < numbers.GetLength(1); j++)
   Console.Write(avarage + "; ");
 }
 */
+
+
+ // game loop
+        while (true)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                int mountainH = int.Parse(Console.ReadLine()); // represents the height of one mountain.
+            }
+    
+            // Write an action using Console.WriteLine()
+            // To debug: Console.Error.WriteLine("Debug messages...");
+            
+            Console.WriteLine("0"); // The index of the mountain to fire on.
+            
+        }
